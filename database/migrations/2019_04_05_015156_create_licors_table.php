@@ -24,6 +24,7 @@ class CreateLicorsTable extends Migration
             $table->integer('stock');
             $table->timestamps();
         });
+        
     }
 
     /**

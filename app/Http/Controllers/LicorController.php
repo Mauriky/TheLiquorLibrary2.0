@@ -15,7 +15,8 @@ class LicorController extends Controller
      */
     public function index()
     {
-        $licor = Licor::all();
+        //$licor = Licor::all();
+        $licor = Licor::paginate(5);
         return view('licores.licorIndex',compact('licor'));
     }
 

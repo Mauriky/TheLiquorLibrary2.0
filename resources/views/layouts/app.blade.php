@@ -64,7 +64,7 @@
                                 Reporte de Ventas
                             </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Registrar Venta</a>
+                            <a class="dropdown-item" href="{{ route('reportes.create') }}">Registrar Venta</a>
                             <a class="dropdown-item" href="#">Mostrar Ventas</a>
                         </div>
                     </div>

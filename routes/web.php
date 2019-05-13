@@ -20,3 +20,4 @@ Route::get('/mas-informacion','PaginaController@masInformacion')->name('masInfor
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('licores', 'LicorController');
 Route::resource('clientes', 'ClienteController');
+Route::resource('reportes', 'ReporteController');

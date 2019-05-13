@@ -17,14 +17,8 @@
                     You are logged in!
                 </div>
             </div>
-           
         </div>
     </div>
 </div>
+
 @endsection
-<style>
-    body{
-        background-image: url(https://stmed.net/sites/default/files/liquor-wallpapers-28266-1113087.jpg);
-                background-size: 100% 100%;
-    }
-</style>

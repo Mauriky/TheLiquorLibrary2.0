@@ -13,15 +13,15 @@
         <style>
             html, body {
                 background-color: #fff;      
-                color: #fff;
+                color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
             }
-
+           
             body{
-                background-image: url(https://s2.best-wallpaper.net/wallpaper/3840x2160/1701/Alcoholic-beverage-liquor-glass-cups-ice-cubes_3840x2160.jpg);
+                background-image: url("{{ asset('welcomeFondo.jpg') }}");
                 background-size: 100% 100%;
             }
 
@@ -68,7 +68,7 @@
             }
         </style>
     </head>
-    <body>
+    <body>jklñjñljñl
         <div class="flex-center position-ref full-height">
              @if (Route::has('login'))
                 <div class="top-right links">
@@ -88,12 +88,6 @@
                 <div class="title m-b-md">
                     The Liquor Libary
                    
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Contactanos</a>
-                    <a href="https://laracasts.com">Acerca de nosotros</a>
-                    <a href="{{ route('masInformacion') }}">Más información</a>
                 </div>
             </div>
         </div>

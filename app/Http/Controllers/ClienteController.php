@@ -14,7 +14,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $cliente = Cliente::all();
+        //$cliente = Cliente::all();
+        $cliente = Cliente::paginate(5);
         return view('clientes.clienteIndex', compact('cliente'));
     }
 
@@ -119,6 +120,10 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente)
     {
-        //
+        $cliente->delete();
+        return redirect()->route('clientes.index')->with([
+            'alerta' => 'Elemento Eliminado',
+            'alert-class' => 'alert-success'
+        ]);
     }
 }

@@ -5,8 +5,8 @@
 <h1 class="offset-5">Licores</h1>
 <div class="offset-3 col-6">
   <h5>@include('partials.mensajes')</h5>
+{{$licor->links()}}
 </div>
-
 <table class="table table-hover table-dark offset-3 col-6">
   <thead>
     <tr>
@@ -33,11 +33,11 @@
         <th>{{ $l->precio }}</th>
         <th>{{ $l->stock }}</th>
         <th>
-          <div class="form-row">
-            <div class="col-md-6">
+         
+            <div>
               <a class="btn btn-outline-warning btn-sm" href="{{ route('licores.edit',$l->id) }}">Editar</a>
             </div>
-          <div class="col-md-6">
+          <div >
 
             <form action="{{ route('licores.destroy', $l->id) }}" method="POST">
               <input type="hidden" name="_method" value="DELETE">
@@ -46,11 +46,11 @@
             </form>
             
           </div>
-          </div>
         </th>
       </tr>
     @endforeach
   </tbody>
 </table>
+
 
 @endsection

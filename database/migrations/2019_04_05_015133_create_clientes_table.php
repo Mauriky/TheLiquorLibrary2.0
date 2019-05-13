@@ -21,6 +21,7 @@ class CreateClientesTable extends Migration
             $table->string('direccion');
             $table->string('email');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

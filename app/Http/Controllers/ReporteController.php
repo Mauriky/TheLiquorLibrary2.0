@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Licor;
+use App\Cliente;
 use App\Reporte;
 use Illuminate\Http\Request;
 
@@ -24,7 +26,9 @@ class ReporteController extends Controller
      */
     public function create()
     {
-        return view('ventas.ventaForm');
+        $clientes = Cliente::all();
+        $productos = Licor::all();
+        return view('ventas.ventaForm', compact('clientes','productos'));
     }
 
     /**
@@ -36,6 +40,7 @@ class ReporteController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request->cliente_id);
     }
 
     /**

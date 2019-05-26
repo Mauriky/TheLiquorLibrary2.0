@@ -5,32 +5,27 @@
 
     <h1>Registro de la venta</h1>
     <form action="{{route('reportes.store')}}" method="POST">
-
-    <div class="form-row">
-        <div class="form group col-md-6">
+    @csrf
+    <div class="form-group">
+        <div class="col-md-8 ">
             <label for="nombre">Nombrel del cliente</label>
-            <input type="text" class="form-control" id="nombre" name="nombre">
-        </div>
-        <div class="form group col-md-2">
-            <label for="clienteId">ID Cliente</label>
-            <input type="text" placeholder="Ingresa ID del cliente" class="form-control" id="clienteId" name="clienteId">
-        </div>
-        <div class="form group col-md-2">
-            <a class="btn btn-outline-info" href="">Buscar</a>
+            <select id="nombre" class="form-control mb-4" name="cliente_id">
+            @foreach($clientes as $cliente)
+                        <option value="{{ $cliente->id }}" >{{ $cliente->nombre }}</option>
+            @endforeach
         </div>
     </div>
-
-    <div class="form-row">
-        <div class="form group col-md-6">
-            <label for="licorId">Licor ID</label>
-            <input type="text" placeholder="Ingresa el ID del licor" class="form-control" id="licorId" name="licorId">
-        </div>
-        <div class="form group col-md-2">
+    <div class="form group col-md-8">
+        <label for="licorId">Licor ID</label>
+        <input type="text" placeholder="Ingresa el ID del licor" class="form-control" id="licorId" name="licorId">
+    </div>
+    <div class="form-group">
+        <div class="form group col-md-4">
             <label for="cantidad">Cantidad</label>
-            <input type="number" placeholder="Ingresa la cantidad" class="form-control" id="cantidad" min="1">
+            <input type="number" placeholder="Ingresa la cantidad" class="form-control mb-2" id="cantidad" min="1">
         </div>
         <div class="form group col-md-2">
-            <a class="btn btn-outline-info" href="">Agregar</a>
+                <a class="btn btn-outline-info" href="">Agregar</a>
         </div>
     </div>
         <br>

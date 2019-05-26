@@ -83,6 +83,7 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
+
     public function edit(Cliente $cliente)
     {
         return view('clientes.clienteForm', compact('cliente'));

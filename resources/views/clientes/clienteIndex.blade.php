@@ -18,6 +18,8 @@
       <th>Direccion</th>
       <th>e-Mail</th>
       <th>Acciones</th>
+      <th>Enviar Correo</th>
+      <th>Subir Archivos</th>
     </tr>
   </thead>
   <tbody>
@@ -37,8 +39,12 @@
                   @csrf
                   <button type="submit" class="btn btn-sm btn-outline-danger">Borrar</button>
               </form>
+        
         </th>
-
+        <th>
+          <a class="btn btn-outline-success btn-sm" href="{{ action('MailSeguimientoController@enviaCorreo',$c) }}">Enviar</a>
+        </th>
+        <th><a class="btn btn-outline-success btn-sm" href="{{ route('clientes.show',$c->id) }}">Subir</a></th>
       </tr>
     @endforeach
   </tbody>

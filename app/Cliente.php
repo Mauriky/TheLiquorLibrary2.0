@@ -20,4 +20,9 @@ class Cliente extends Model
         $this->attributes['rfc'] = strtoupper($rfc);
     }
 
+    public function archivos()
+    {
+        return $this->morphMany('App\Archivo', 'modelo');
+    }
+
 }

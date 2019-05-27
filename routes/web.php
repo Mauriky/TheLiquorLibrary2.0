@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('licores', 'LicorController');
 Route::resource('clientes', 'ClienteController');
 Route::resource('reportes', 'ReporteController');
+
+Route::get('seguimiento/envia-correo/{user}', 'MailSeguimientoController@enviaCorreo');
+Route::resource('archivo', 'ArchivoController', ['except' => ['create', 'edit', 'update']]);

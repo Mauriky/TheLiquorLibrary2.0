@@ -36,7 +36,7 @@
                 <h3 class="card-title">Carga de Archivos</h3>
             </div>
             <div class="card-body">
-                @include('archivos.archivoUpload', ['modelo_id' => $cliente->id, 'modelo_type' => 'Documento'])
+                @include('archivos.archivoUpload', ['modelo_id' => $cliente->id, 'modelo_type' => 'cliente'])
             </div>
         </div>
     </div>

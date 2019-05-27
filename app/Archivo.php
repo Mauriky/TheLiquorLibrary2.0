@@ -5,9 +5,9 @@ class Archivo extends Model
 {
     protected $guarded = ['id'];
     
-    public function documento()
+    public function cliente()
     {
-        return $this->belongsTo(Documento::class);
+        return $this->belongsTo(Cliente::class);
     }
     public function user()
     {
